@@ -1,0 +1,41 @@
+{
+  "extends": ["prettier"],
+  "rules": {
+    "semi": [2, "never"],
+    "import/order": "off",
+    "eol-last": [2, "always"],
+    "mocha/no-mocha-arrows": "off",
+    "quotes": [2, "single", "avoid-escape"],
+    "@typescript-eslint/semi": [2, "never"],
+    "@typescript-eslint/space-before-function-parent": true,
+    "@typescript-eslint/quotes": [2, "single", "avoid-escape"],
+    "max-len": [
+      2,
+      {
+        "code": 120,
+        "ignoreUrls": true,
+        "ignoreStrings": true,
+        "ignoreComments": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    "@typescript-eslint/ban-types": [
+      2,
+      {
+        "types": {
+          "any": false,
+          "Object": false
+        }
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": ["src/contract/server.ts"],
+      "rules": {
+        "@typescript-eslint/ban-types": "off",
+        "@typescript-eslint/no-empty-interface": "off"
+      }
+    }
+  ]
+}

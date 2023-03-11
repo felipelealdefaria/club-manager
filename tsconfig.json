@@ -1,0 +1,36 @@
+{
+  "extends": "@tsconfig/node16/tsconfig.json",
+  "compilerOptions": {
+    "strict": true,
+    "allowJs": true,
+    "baseUrl": "./",
+    "rootDir": "src",
+    "outDir": "build",
+    "sourceMap": true,
+    "target": "es2020",
+    "declaration": true,
+    "module": "commonjs",
+    "skipLibCheck": true,
+    "esModuleInterop": true,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": ["es2020", "esnext.bigint"],
+    "paths": {
+      "@src/*": ["src/*"],
+      "@client/*": ["src/client/*"],
+      "@server/*": ["src/server/*"],
+      "@contract/*": ["src/contract/*"]
+    },
+    "strictPropertyInitialization": false,
+    "forceConsistentCasingInFileNames": true,
+    "typeRoots": [
+      "./src/client/types",
+      "./src/server/types",
+      "./src/contract/types",
+      "./node_modules/@types"
+    ]
+  },
+  "include": ["src"],
+  "exclude": ["build/**/*"],
+  "ts-node": { "files": true },
+}

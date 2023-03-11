@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "allowJs": true,
+    "rootDir": "src",
+    "lib": ["es2020"],
+    "esModuleInterop": true,
+    "typeRoots": ["./node_modules/@types"],
+  },
+  "exclude": ["build/**/*"],
+  "include": ["src", ".eslintrc.js"]
+}
